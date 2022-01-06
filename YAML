@@ -1,0 +1,2374 @@
+---
+swagger: "2.0"
+info:
+  description: "ietf-te-types,ietf-yang-types,ietf-transport-network-slice,ietf-inet-types,ietf-routing-types\
+    \ API generated from yang definitions"
+  version: "1.0"
+  title: "ietf-te-types,ietf-yang-types,ietf-transport-network-slice,ietf-inet-types,ietf-routing-types\
+    \ API"
+host: "localhost:1234"
+consumes:
+- "application/yang-data+json"
+produces:
+- "application/yang-data+json"
+paths:
+  /data/network-slices/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.NetworkSlices"
+      parameters: []
+      responses:
+        200:
+          description: "ietf.transport.network.slice.NetworkSlices"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.NetworkSlices"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.NetworkSlices"
+      parameters:
+      - in: "body"
+        name: "ietf.transport.network.slice.NetworkSlices.body-param"
+        description: "ietf.transport.network.slice.NetworkSlices to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.NetworkSlices"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.NetworkSlices"
+      parameters:
+      - in: "body"
+        name: "ietf.transport.network.slice.NetworkSlices.body-param"
+        description: "ietf.transport.network.slice.NetworkSlices to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.NetworkSlices"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.NetworkSlices"
+      parameters: []
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice/:
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.NetworkSlice"
+      parameters:
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.NetworkSlice.body-param"
+        description: "ietf.transport.network.slice.networkslices.NetworkSlice to be\
+          \ added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.NetworkSlice"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  /data/network-slices/network-slice={ns-id}/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networkslices.NetworkSlice"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networkslices.NetworkSlice"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networkslices.NetworkSlice"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.NetworkSlice"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.NetworkSlice.body-param"
+        description: "ietf.transport.network.slice.networkslices.NetworkSlice to be\
+          \ added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.NetworkSlice"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networkslices.NetworkSlice"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.NetworkSlice.body-param"
+        description: "ietf.transport.network.slice.networkslices.NetworkSlice to be\
+          \ added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.NetworkSlice"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networkslices.NetworkSlice"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/connectivity-matrices/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/connectivity-matrices/connectivity-matrix/:
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  /data/network-slices/network-slice={ns-id}/connectivity-matrices/connectivity-matrix={connectivity-matrix-id}/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/connectivity-matrices/connectivity-matrix={connectivity-matrix-id}/explicit-path/:
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.explicitpath.ExplicitPath"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - in: "body"
+        name: "ietf.transport.network.slice.explicitpath.ExplicitPath.body-param"
+        description: "ietf.transport.network.slice.explicitpath.ExplicitPath to be\
+          \ added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.explicitpath.ExplicitPath"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  ? /data/network-slices/network-slice={ns-id}/connectivity-matrices/connectivity-matrix={connectivity-matrix-id}/explicit-path={tp-id}/
+  : get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.explicitpath.ExplicitPath"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "tp-id"
+        in: "path"
+        description: "Id of explicit-path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.explicitpath.ExplicitPath"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.explicitpath.ExplicitPath"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.explicitpath.ExplicitPath"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "tp-id"
+        in: "path"
+        description: "Id of explicit-path"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.explicitpath.ExplicitPath.body-param"
+        description: "ietf.transport.network.slice.explicitpath.ExplicitPath to be\
+          \ added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.explicitpath.ExplicitPath"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.explicitpath.ExplicitPath"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "tp-id"
+        in: "path"
+        description: "Id of explicit-path"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.explicitpath.ExplicitPath.body-param"
+        description: "ietf.transport.network.slice.explicitpath.ExplicitPath to be\
+          \ added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.explicitpath.ExplicitPath"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.explicitpath.ExplicitPath"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "tp-id"
+        in: "path"
+        description: "Id of explicit-path"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/connectivity-matrices/connectivity-matrix={connectivity-matrix-id}/slo/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - in: "body"
+        name: "ietf.transport.network.slice.connectivitymatrixentryslo.Slo.body-param"
+        description: "ietf.transport.network.slice.connectivitymatrixentryslo.Slo\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      - in: "body"
+        name: "ietf.transport.network.slice.connectivitymatrixentryslo.Slo.body-param"
+        description: "ietf.transport.network.slice.connectivitymatrixentryslo.Slo\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "connectivity-matrix-id"
+        in: "path"
+        description: "Id of connectivity-matrix"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/endpoints/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.Endpoints.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.Endpoints\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.Endpoints.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.Endpoints\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/endpoints/endpoint/:
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  /data/network-slices/network-slice={ns-id}/endpoints/endpoint={endpoint-id}/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "endpoint-id"
+        in: "path"
+        description: "Id of endpoint"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "endpoint-id"
+        in: "path"
+        description: "Id of endpoint"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "endpoint-id"
+        in: "path"
+        description: "Id of endpoint"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "endpoint-id"
+        in: "path"
+        description: "Id of endpoint"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology/:
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology.body-param"
+        description: "ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/link/:
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networktopologydef.Link"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.Link.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.Link to be added\
+          \ to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Link"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/link={link-id}/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networktopologydef.Link"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networktopologydef.Link"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Link"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networktopologydef.Link"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.Link.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.Link to be added\
+          \ to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Link"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networktopologydef.Link"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.Link.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.Link to be added\
+          \ or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Link"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networktopologydef.Link"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/link={link-id}/destination/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networktopologydef.link.Destination"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networktopologydef.link.Destination"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.link.Destination"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networktopologydef.link.Destination"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.link.Destination.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.link.Destination\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.link.Destination"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networktopologydef.link.Destination"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.link.Destination.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.link.Destination\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.link.Destination"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networktopologydef.link.Destination"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/link={link-id}/slo/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.linkslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.linkslo.Slo"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.linkslo.Slo"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.linkslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.linkslo.Slo.body-param"
+        description: "ietf.transport.network.slice.linkslo.Slo to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.linkslo.Slo"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.linkslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.linkslo.Slo.body-param"
+        description: "ietf.transport.network.slice.linkslo.Slo to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.linkslo.Slo"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.linkslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/link={link-id}/source/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networktopologydef.link.Source"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networktopologydef.link.Source"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.link.Source"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networktopologydef.link.Source"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.link.Source.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.link.Source\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.link.Source"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networktopologydef.link.Source"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.link.Source.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.link.Source\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.link.Source"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networktopologydef.link.Source"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "link-id"
+        in: "path"
+        description: "Id of link"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/node/:
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networktopologydef.Node"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.Node.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.Node to be added\
+          \ to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Node"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/node={node-id}/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networktopologydef.Node"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networktopologydef.Node"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Node"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networktopologydef.Node"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.Node.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.Node to be added\
+          \ to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Node"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networktopologydef.Node"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.Node.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.Node to be added\
+          \ or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Node"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networktopologydef.Node"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/node={node-id}/slo/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.nodeslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.nodeslo.Slo"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.nodeslo.Slo"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.nodeslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.nodeslo.Slo.body-param"
+        description: "ietf.transport.network.slice.nodeslo.Slo to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.nodeslo.Slo"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.nodeslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.nodeslo.Slo.body-param"
+        description: "ietf.transport.network.slice.nodeslo.Slo to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.nodeslo.Slo"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.nodeslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/node={node-id}/termination-point/:
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.node.TerminationPoint.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.node.TerminationPoint\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  ? /data/network-slices/network-slice={ns-id}/network-topologies/network-topology={topology-id}/node={node-id}/termination-point={tp-id}/
+  : get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - name: "tp-id"
+        in: "path"
+        description: "Id of termination-point"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - name: "tp-id"
+        in: "path"
+        description: "Id of termination-point"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.node.TerminationPoint.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.node.TerminationPoint\
+          \ to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - name: "tp-id"
+        in: "path"
+        description: "Id of termination-point"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.networktopologydef.node.TerminationPoint.body-param"
+        description: "ietf.transport.network.slice.networktopologydef.node.TerminationPoint\
+          \ to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - name: "topology-id"
+        in: "path"
+        description: "Id of network-topology"
+        required: true
+        type: "string"
+      - name: "node-id"
+        in: "path"
+        description: "Id of node"
+        required: true
+        type: "string"
+      - name: "tp-id"
+        in: "path"
+        description: "Id of termination-point"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/network-slices/network-slice={ns-id}/slo/:
+    get:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "returns ietf.transport.network.slice.nsslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "ietf.transport.network.slice.nsslo.Slo"
+          schema:
+            $ref: "#/definitions/ietf.transport.network.slice.nsslo.Slo"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates ietf.transport.network.slice.nsslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.nsslo.Slo.body-param"
+        description: "ietf.transport.network.slice.nsslo.Slo to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.nsslo.Slo"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "creates or updates ietf.transport.network.slice.nsslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "ietf.transport.network.slice.nsslo.Slo.body-param"
+        description: "ietf.transport.network.slice.nsslo.Slo to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/ietf.transport.network.slice.nsslo.Slo"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "ietf-transport-network-slice"
+      description: "removes ietf.transport.network.slice.nsslo.Slo"
+      parameters:
+      - name: "ns-id"
+        in: "path"
+        description: "Id of network-slice"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+definitions:
+  ietf.transport.network.slice.ConnectivityMatrixEntrySlo:
+    type: "object"
+    properties:
+      slo:
+        description: "SLO configuration of a connectivity matrix entry"
+        $ref: "#/definitions/ietf.transport.network.slice.connectivitymatrixentryslo.Slo"
+  ietf.transport.network.slice.ExplicitPath:
+    type: "object"
+    properties:
+      explicit-path:
+        type: "array"
+        description: "List of TPs within a network topology that form a path."
+        items:
+          $ref: "#/definitions/ietf.transport.network.slice.explicitpath.ExplicitPath"
+  ietf.transport.network.slice.LinkSlo:
+    type: "object"
+    properties:
+      slo:
+        description: "SLO configuration of a link"
+        $ref: "#/definitions/ietf.transport.network.slice.linkslo.Slo"
+  ietf.transport.network.slice.NetworkSlices:
+    type: "object"
+    properties:
+      network-slice:
+        type: "array"
+        description: "Network slice identifier"
+        items:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.NetworkSlice"
+  ietf.transport.network.slice.NetworkTopologyDef:
+    type: "object"
+    properties:
+      link:
+        type: "array"
+        description: "Link identifier."
+        items:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Link"
+      node:
+        type: "array"
+        description: "The inventory of nodes of this topology."
+        items:
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.Node"
+  ietf.transport.network.slice.NodeSlo:
+    type: "object"
+    properties:
+      slo:
+        description: "SLO configuration of a node"
+        $ref: "#/definitions/ietf.transport.network.slice.nodeslo.Slo"
+  ietf.transport.network.slice.NsGenericInfo:
+    type: "object"
+    properties:
+      ns-name:
+        type: "string"
+        description: "Name of the specific network slice"
+      ns-description:
+        type: "string"
+        description: "Description regarding the specific network slice"
+      customer-name:
+        type: "array"
+        description: "List of customers using the slice"
+        items:
+          type: "string"
+  ietf.transport.network.slice.NsSlo:
+    type: "object"
+    properties:
+      slo:
+        description: "SLO configuration of a network slice"
+        $ref: "#/definitions/ietf.transport.network.slice.nsslo.Slo"
+  ietf.transport.network.slice.connectivitymatrixentryslo.Slo:
+    type: "object"
+  ietf.transport.network.slice.explicitpath.ExplicitPath:
+    type: "object"
+    properties:
+      tp-id:
+        type: "string"
+        description: "Relative reference to TP id."
+        x-path: "/network-slices/network-slice[ns-id=current()/../../../../ns-id]/network-topologies/network-topology[topology-id=current()/../../topology-id]/node/termination-point/tp-id"
+  ietf.transport.network.slice.linkslo.Slo:
+    type: "object"
+    properties:
+      isolation-level:
+        type: "string"
+        description: "A network slice instance may be fully or partly, logically\n\
+          \           and/or physically, isolated from another network slice\n   \
+          \        instance. This attribute describes different types of\n       \
+          \    isolation:"
+      periodicity:
+        type: "array"
+        description: "A list of periodicities supported by the network slice. REF:GSMA-NS-Template:\
+          \ Generic Network Slice Template,\n           Version 3.0."
+        items:
+          type: "integer"
+          format: "int32"
+      delay-tolerance:
+        type: "boolean"
+        description: "'true' if is not too critical how long it takes to deliver\n\
+          \           the amount of data. REF:GSMA-NS-Template: Generic Network Slice\
+          \ Template,\n           Version 3.0."
+        default: false
+  ietf.transport.network.slice.networkslices.NetworkSlice:
+    allOf:
+    - $ref: "#/definitions/ietf.transport.network.slice.NsGenericInfo"
+    - $ref: "#/definitions/ietf.transport.network.slice.NsSlo"
+    - type: "object"
+      properties:
+        connectivity-matrices:
+          description: "Connectivity matrices"
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices"
+        ns-id:
+          type: "string"
+          description: "A unique network slice identifier across a slice controller"
+        network-topologies:
+          description: "A network slice is described as a network topology"
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies"
+        endpoints:
+          description: "Endpoints of a network slice"
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.Endpoints"
+      description: "Network slice identifier"
+  ietf.transport.network.slice.networkslices.networkslice.ConnectivityMatrices:
+    type: "object"
+    properties:
+      connectivity-matrix:
+        type: "array"
+        description: "List of connectivity matrix entities"
+        items:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix"
+  ietf.transport.network.slice.networkslices.networkslice.Endpoints:
+    type: "object"
+    properties:
+      endpoint:
+        type: "array"
+        description: "List of endpoints"
+        items:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint"
+  ietf.transport.network.slice.networkslices.networkslice.NetworkTopologies:
+    type: "object"
+    properties:
+      network-topology:
+        type: "array"
+        description: "List of network topologies"
+        items:
+          $ref: "#/definitions/ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology"
+  ietf.transport.network.slice.networkslices.networkslice.connectivitymatrices.ConnectivityMatrix:
+    allOf:
+    - $ref: "#/definitions/ietf.transport.network.slice.ConnectivityMatrixEntrySlo"
+    - $ref: "#/definitions/ietf.transport.network.slice.ExplicitPath"
+    - type: "object"
+      properties:
+        connectivity-matrix-id:
+          type: "integer"
+          format: "int64"
+          description: "Connectivity matrix identifier"
+        topology-id:
+          type: "string"
+          description: "Relative reference to network topology id."
+          x-path: "../../../network-topologies/network-topology/topology-id"
+        dst-endpoint:
+          type: "string"
+          description: "Relative reference to endpoint id."
+          x-path: "../../../endpoints/endpoint/endpoint-id"
+        src-endpoint:
+          type: "string"
+          description: "Relative reference to endpoint id."
+          x-path: "../../../endpoints/endpoint/endpoint-id"
+      description: "List of connectivity matrix entities"
+  ietf.transport.network.slice.networkslices.networkslice.endpoints.Endpoint:
+    type: "object"
+    properties:
+      endpoint-id:
+        type: "string"
+        description: "Endpoint identifier"
+  ietf.transport.network.slice.networkslices.networkslice.networktopologies.NetworkTopology:
+    allOf:
+    - $ref: "#/definitions/ietf.transport.network.slice.NetworkTopologyDef"
+    - type: "object"
+      properties:
+        topology-id:
+          type: "string"
+          description: "Topology identifier"
+      description: "List of network topologies"
+  ietf.transport.network.slice.networktopologydef.Link:
+    allOf:
+    - $ref: "#/definitions/ietf.transport.network.slice.LinkSlo"
+    - type: "object"
+      properties:
+        destination:
+          description: "Link destination node"
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.link.Destination"
+        link-id:
+          type: "string"
+          description: "Link identifier."
+        source:
+          description: "Link source node"
+          $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.link.Source"
+      description: "Link identifier."
+  ietf.transport.network.slice.networktopologydef.Node:
+    allOf:
+    - $ref: "#/definitions/ietf.transport.network.slice.NodeSlo"
+    - type: "object"
+      properties:
+        node-id:
+          type: "string"
+          description: "Node identifier."
+        termination-point:
+          type: "array"
+          description: "TP identifier"
+          items:
+            $ref: "#/definitions/ietf.transport.network.slice.networktopologydef.node.TerminationPoint"
+      description: "The inventory of nodes of this topology."
+  ietf.transport.network.slice.networktopologydef.link.Destination:
+    type: "object"
+    properties:
+      dest-tp:
+        type: "string"
+        description: "Termination point within destination node that terminates\n\
+          \             the link."
+        x-path: "../../../node[node-id=current()/../dest-node]/termination-point/tp-id"
+      dest-node:
+        type: "string"
+        description: "Destination node identifier, must be in same topology."
+        x-path: "../../../node/node-id"
+  ietf.transport.network.slice.networktopologydef.link.Source:
+    type: "object"
+    properties:
+      source-node:
+        type: "string"
+        description: "Source node identifier, must be in same topology."
+        x-path: "../../../node/node-id"
+      source-tp:
+        type: "string"
+        description: "Termination point within source node that terminates\n     \
+          \        the link."
+        x-path: "../../../node[node-id=current()/../source-node]/termination-point/tp-id"
+  ietf.transport.network.slice.networktopologydef.node.TerminationPoint:
+    type: "object"
+    properties:
+      tp-id:
+        type: "string"
+        description: "Termination point identifier."
+      endpoint-id:
+        type: "string"
+        description: "Relative reference to TP id."
+        x-path: "/network-slices/network-slice[ns-id=current()/../../../../../ns-id]/endpoints/endpoint/endpoint-id"
+  ietf.transport.network.slice.nodeslo.Slo:
+    type: "object"
+    properties:
+      isolation-level:
+        type: "string"
+        description: "A network slice instance may be fully or partly, logically\n\
+          \           and/or physically, isolated from another network slice\n   \
+          \        instance. This attribute describes different types of\n       \
+          \    isolation:"
+  ietf.transport.network.slice.nsslo.Slo:
+    type: "object"
+    properties:
+      isolation-level:
+        type: "string"
+        description: "A network slice instance may be fully or partly, logically\n\
+          \           and/or physically, isolated from another network slice\n   \
+          \        instance. This attribute describes different types of\n       \
+          \    isolation:"
+      periodicity:
+        type: "array"
+        description: "A list of periodicities supported by the network slice. REF:GSMA-NS-Template:\
+          \ Generic Network Slice Template,\n           Version 3.0."
+        items:
+          type: "integer"
+          format: "int32"
+      delay-tolerance:
+        type: "boolean"
+        description: "'true' if is not too critical how long it takes to deliver\n\
+          \           the amount of data. REF:GSMA-NS-Template: Generic Network Slice\
+          \ Template,\n           Version 3.0."
+        default: false
+      optimization-criterion:
+        type: "string"
+        description: "Optimization criterion applied to this topology."
